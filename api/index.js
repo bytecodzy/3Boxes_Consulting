@@ -19,11 +19,23 @@ app.use(cors({
   allowedHeaders: ['Content-Type']
 }));
 
+// ─── STRIP /api PREFIX ──────────────────────────
+// On Vercel, api/[...path].js receives the full URL (e.g., /api/chat/message).
+// We strip the /api prefix so our routes below (defined as /chat/message, /health, etc.) match correctly.
+// This also works locally where local-server.js receives /api/health requests.
+app.use((req, res, next) => {
+  if (req.url.startsWith('/api/')) {
+    req.url = req.url.substring(4); // Remove '/api'
+  } else if (req.url === '/api') {
+    req.url = '/';
+  }
+  next();
+});
+
 // ─── API ROUTES ──────────────────────────────────
 
 /**
  * GET /api/session
- * Returns session info (stateless — frontend stores everything)
  */
 app.get('/session', async (req, res) => {
   try {
@@ -44,12 +56,6 @@ app.get('/session', async (req, res) => {
 
 /**
  * POST /api/chat/message
- * Body: { userId, message, conversationId?, userKey?, botpressUserId? }
- * Returns: { success, reply, conversationId, userKey, botpressUserId }
- *
- * IMPORTANT: userKey and botpressUserId are stored in localStorage on the
- * frontend and sent with each request. This makes the backend fully stateless
- * so it works with Vercel serverless functions.
  */
 app.post('/chat/message', async (req, res) => {
   try {
@@ -64,7 +70,6 @@ app.post('/chat/message', async (req, res) => {
 
     console.log(`Chat: ${userId} -> "${message.trim().substring(0, 50)}" (conv: ${conversationId || 'new'})`);
 
-    // Call Botpress — pass all state from the request
     const result = await botpressService.chat(
       userId,
       message.trim(),
@@ -94,7 +99,6 @@ app.post('/chat/message', async (req, res) => {
 
 /**
  * GET /api/chat/history/:conversationId
- * Query: ?userKey=required
  */
 app.get('/chat/history/:conversationId', async (req, res) => {
   try {
@@ -116,8 +120,6 @@ app.get('/chat/history/:conversationId', async (req, res) => {
 
 /**
  * POST /api/chat/reset
- * Body: { userId }
- * Stateless — frontend just clears localStorage, no server-side action needed
  */
 app.post('/chat/reset', async (req, res) => {
   try {
@@ -149,5 +151,4 @@ app.get('/health', async (req, res) => {
 });
 
 // ─── EXPORT FOR VERCEL ──────────────────────────
-// Vercel wraps Express as a serverless function
 module.exports = app;
