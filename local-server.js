@@ -11,9 +11,9 @@ app.use('/api', apiApp);
 // Serve static files from public/
 app.use(express.static(path.join(__dirname, 'public')));
 
-// Fallback to index10.html for root
+// Fallback to index.html for root
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public', 'index10.html'));
+  res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
 const PORT = process.env.PORT || 5000;
