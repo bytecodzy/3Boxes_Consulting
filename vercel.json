@@ -1,7 +1,18 @@
-{
-  "functions": {
-    "api/[...path].js": {
-      "maxDuration": 30
-    }
-  }
-}
+Set-Content -Path "fix-vercel.js" -Value @"
+var fs = require('fs');
+fs.writeFileSync('vercel.json', JSON.stringify({
+  version: 2,
+  builds: [
+    { src: 'api/index.js', use: '@vercel/node' },
+    { src: 'public/**', use: '@vercel/static' }
+  ],
+  routes: [
+    { src: '/api/(.*)', dest: '/api/index.js' },
+    { handle: 'filesystem' },
+    { src: '/(.*)', dest: '/public/$1' }
+  ]
+}, null, 2));
+console.log('vercel.json updated!');
+"@
+
+node fix-vercel.js

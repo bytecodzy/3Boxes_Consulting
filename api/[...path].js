@@ -1,2 +1,0 @@
-// Vercel Catch-All Route Handler
-module.exports = require('./index');
