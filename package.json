@@ -1,0 +1,17 @@
+{
+  "name": "3boxes-consulting",
+  "version": "1.0.0",
+  "description": "3Boxes Consulting Services - Website with AI Chatbot",
+  "private": true,
+  "scripts": {
+    "start": "node api/index.js",
+    "dev": "vercel dev"
+  },
+  "dependencies": {
+    "axios": "^1.7.0",
+    "cors": "^2.8.5",
+    "dotenv": "^17.4.2",
+    "express": "^4.21.0",
+    "uuid": "^9.0.0"
+  }
+}

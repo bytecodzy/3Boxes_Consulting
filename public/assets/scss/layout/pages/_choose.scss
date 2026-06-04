@@ -1,0 +1,218 @@
+@use '../../utils/' as * ;
+
+/*============= CHOOSE CSS AREA STARTS ===============*/
+.choose1 {
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    .choose-widget-boxarea {
+        position: relative;
+        z-index: 1;
+        border-radius: 10px;
+        background: var(--ztc-bg-bg-15);
+        transition: all .4s;
+        padding: 24px;
+        border: 1px solid var(--ztc-bg-bg-15);
+        &:hover {
+            border: 1px solid var(--ztc-text-text-13);
+            transition: all .4s;
+            transform: translateY(-10px);
+        }
+        .icons {
+            height: 30px;
+            width: 30px;
+            object-fit: cover;
+            border-radius: 50%;
+            position: absolute;
+            z-index: 1;
+            left: 50px;
+            top: 35px;
+            @media #{$xs} {
+                position: relative;
+                left: 10px;
+                top: 0;
+            }
+            &::after {
+                position: absolute;
+                content: "";
+                height: 60px;
+                width: 60px;
+                border-radius: 50%;
+                background: var(--ztc-bg-bg-14);
+                opacity: 20%;
+                left: 50%;
+                top: 50%;
+                margin-left: -30px;
+                margin-top: -30px;
+            }
+        }
+        .content-text {
+            padding-left: 100px;
+            @media #{$xs} {
+                padding-left: 0;
+                margin-top: 40px;
+            }
+            a {
+                color: var(--ztc-text-text-11);
+                font-family: var(--ztc-family-font1);
+                font-size: var(--ztc-font-size-font-s22);
+                font-style: normal;
+                font-weight: var(--ztc-weight-bold);
+                line-height: 22px; /* 100% */
+                display: inline-block;
+                transition: all .4s;
+                &:hover {
+                    color: var(--ztc-text-text-13);
+                    transition: all .4s;
+                } 
+                @media #{$xs} {
+                    line-height: 30px;
+                } 
+            }
+            p {
+                color: var(--ztc-text-text-12);
+                font-family: var(--ztc-family-font1);
+                font-size: var(--ztc-font-size-font-s18);
+                font-style: normal;
+                font-weight: var(--ztc-weight-medium);
+                line-height: 26px;
+            }
+        }
+    }
+
+    .heading4 {
+        padding: 0 0 0 30px;
+        @media #{$xs} {
+            padding: 0;
+            margin-top: 30px;
+        }
+        @media #{$md} {
+            padding: 0;
+            margin-top: 30px;
+        }
+    }
+}
+
+// Inner Pages //
+.choose-about-area {
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    .choose-button-area {
+        ul {
+            display: block;
+            text-align: center;
+            li {
+                display: inline-block;
+                margin: 0 20px 0 0;
+                &:nth-last-child(1) {
+                    margin: 0;
+                }
+                @media #{$xs} {
+                    margin-bottom: 10px;
+                }
+                @media #{$md} {
+                    margin-bottom: 10px;
+                }
+                button {
+                    color: var(--ztc-text-text-2);
+                    font-family: var(--ztc-family-font1);
+                    font-size: var(--ztc-font-size-font-s18);
+                    font-style: normal;
+                    font-weight: var(--ztc-weight-bold);
+                    line-height: 18px; 
+                    display: inline-block;
+                    transition: all .4s;
+                    background: var(--ztc-bg-bg-4);
+                    border-radius: 10px;
+                    padding: 18px 90px;
+                    &.active {
+                        background: var(--ztc-bg-bg-3);
+                        transition: all .4s;
+                    }
+                }
+            }
+        }
+    }
+    .tab-content {
+        .tab-pane {
+            .choose-heading {
+                h4 {
+                   color: var(--ztc-text-text-2);
+                    font-family: var(--ztc-family-font1);
+                    font-size: var(--ztc-font-size-font-s24);
+                    font-style: normal;
+                    font-weight: var(--ztc-weight-bold);
+                    line-height: 24px; 
+                    @media #{$xs} {
+                        line-height: 30px;
+                    }
+                }
+                p {
+                    color: var(--ztc-text-text-3);
+                    font-family: var(--ztc-family-font1);
+                    font-size: var(--ztc-font-size-font-s18);
+                    font-style: normal;
+                    font-weight: var(--ztc-weight-medium);
+                    line-height: 26px; /* 144.444% */
+                }
+                 .choose2-boxarea {
+                    &:hover {
+                        .icons {
+                            transform: rotateY(-180deg);
+                            transition: all .4s;
+                        }
+                    }
+                    .icons {
+                        border-radius: 60px;
+                        background: rgba(251, 133, 0, 0.08);
+                        height: 60px;
+                        width: 60px;
+                        text-align: center;
+                        line-height: 60px;
+                        border-radius: 50%;
+                        transition: all .4s;
+                        display: inline-block;
+                        position: absolute;
+                    }
+                    .text-area {
+                        padding-left: 76px;
+                        a {
+                            color: var(--ztc-text-text-2);
+                            font-family: var(--ztc-family-font1);
+                            font-size: var(--ztc-font-size-font-s20);
+                            font-style: normal;
+                            font-weight: var(--ztc-weight-bold);
+                            line-height: 20px;
+                            display: inline-block;
+                            transition: all .4s;
+                            @media #{$xs} {
+                                line-height: 28px;
+                            }
+                            &:hover {
+                                color: var(--ztc-text-text-4);
+                                transition: all .4s;
+                            }     
+                        }
+                    }
+                }
+            }
+            .img1 {
+                @media #{$xs} {
+                    margin-top: 30px;
+                }
+
+                @media #{$md} {
+                    margin-top: 30px;
+                }
+                img {
+                    height: 100%;
+                    width: 100%;
+                    object-fit: cover;
+                    border-radius: 8px;
+                }
+            }
+        }
+    }
+}
+/*============= CHOOSE CSS AREA STARTS ===============*/

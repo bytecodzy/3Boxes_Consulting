@@ -1,0 +1,1740 @@
+@use '../utils' as *;
+
+/*============= MOBILE MENU CSS AREA ===============*/
+.vl-header-action-item {
+    float: right;
+    border: 1px solid var(--ztc-text-text-2);
+    padding: 6px;
+    border-radius: 4px;
+    color: var(--ztc-text-text-2);
+    button {
+        border: none;
+        outline: none;
+        background: none;
+        transition: all .4s;
+        color: var(--ztc-text-text-2);
+        font-size: var(--ztc-font-size-font-s20);
+    }
+}
+    .vl-offcanvas {
+        position: fixed;
+        background: var(--ztc-bg-bg-3);
+        width: 450px;
+        z-index: 99;
+        right: 0;
+        top: 0;
+        padding: 50px 40px;
+        height: 100%;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateX(100%);
+        transition: .3s;
+        overflow-y: scroll;
+        overscroll-behavior-y: contain;
+        scrollbar-width: none;
+        @media only screen and (max-width:450px){
+            width: 100%;
+        }
+        &-open{
+            opacity: 1;
+            visibility: visible;
+            transform: translateX(0);
+        }
+        &-close-toggle{
+            font-size: var(--ztc-font-size-font-s30);
+            color: var(--vl-heading-color);
+        }
+        &-header{
+            @media #{$lg,$md,$xs}{
+                margin-bottom: 40px;
+            }
+    
+        }
+       
+        &-title{
+            font-size: 35px;
+            color: var(--ztc-text-text-1);
+        }
+        
+        &-info {
+            & span {
+                a {
+                    display: block;
+                    color: var(--ztc-text-text-1);
+                    margin-bottom: 10px;
+                    i {
+                        margin: 0 4px 0 0;
+                    }
+                }
+            }
+        }
+        &-sm-title{
+            font-size: var(--ztc-font-size-font-s24);
+            color: var(--ztc-text-text-1);
+        }
+        &-social{
+            &  a{
+                display: inline-block;
+                text-align: center;
+                width: 40px;
+                height: 40px;
+                line-height: 40px;
+                border-radius: 40px;
+                color: var(--ztc-text-text-1);
+                border: 1px solid var(--ztc-text-text-1);
+                font-size: 14px;
+            }
+        }
+    
+        &-overlay{
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 50;
+            width: 100%;
+            height: 100%;
+            visibility: hidden;
+            opacity: 0;
+            transition: 0.45 easc-in-out;
+            background: rgba(24, 24, 24, 0.4);
+            &-open{
+                opacity: .7;
+                visibility: visible;
+            }
+        }
+       .vl-offcanvas-logo {
+        height: 50px;
+        width: 164px;
+        object-fit: contain;
+        filter: brightness(0) invert(1);
+       }
+    .vl-offcanvas-close {
+        button {
+            border: none;
+            background: none;
+            outline: none;
+            color: var(--ztc-text-text-1);
+        }
+    }
+    }
+    
+    .vl-offcanvas-menu ul {
+        list-style: none;
+        & li{
+            position: relative;
+            
+            & a{
+                padding: 8px 0;
+                display: block;
+                font-size: var(--ztc-font-size-font-s18);
+                font-weight: var(--ztc-weight-medium);
+                color: var(--ztc-text-text-1);
+                transition: all .4s;
+                & span{
+                    display: block;
+                }
+            }
+            & > a{
+                border-bottom: none;
+            }
+            &.active{
+                & > a{
+                    color: var(--ztc-text-text-1);
+                }
+                & > .vl-menu-close{
+                    & i{
+                        transform: rotate(90deg);
+                    }
+                }
+            }
+    
+            & .sub-menu{
+                display: none;
+                padding-left: 20px;
+            }
+        }
+    }
+    .vl-menu-close{
+        position: absolute;
+        right: 0;
+        top: 7px;
+        border: 1px solid var(--ztc-text-text-1);
+        height: 30px;
+        width: 30px;
+        text-align: center;
+        font-size: 12px;
+        line-height: 25px;
+        background: transparent;
+        color: var(--ztc-text-text-1);
+        border-radius: 4px;
+        & i{
+            transition: .3s;
+        }
+    }
+
+
+// Homepage 02 //
+.homepage2-body {
+.vl-header-action-item {
+    float: right;
+    border: 1px solid var(--ztc-text-text-1);
+    padding: 6px;
+    border-radius: 4px;
+    color: var(--ztc-text-text-1);
+    button {
+        border: none;
+        outline: none;
+        background: none;
+        transition: all .4s;
+        color: var(--ztc-text-text-1);
+        font-size: var(--ztc-font-size-font-s20);
+    }
+}
+    .vl-offcanvas {
+        position: fixed;
+        background: var(--ztc-bg-bg-5);
+        width: 450px;
+        z-index: 99;
+        right: 0;
+        top: 0;
+        padding: 50px 40px;
+        height: 100%;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateX(100%);
+        transition: .3s;
+        overflow-y: scroll;
+        overscroll-behavior-y: contain;
+        scrollbar-width: none;
+        @media only screen and (max-width:450px){
+            width: 100%;
+        }
+        &-open{
+            opacity: 1;
+            visibility: visible;
+            transform: translateX(0);
+        }
+        &-close-toggle{
+            font-size: var(--ztc-font-size-font-s30);
+            color: var(--vl-heading-color);
+        }
+        &-header{
+            @media #{$lg,$md,$xs}{
+                margin-bottom: 40px;
+            }
+    
+        }
+       
+        &-title{
+            font-size: 35px;
+            color: var(--ztc-text-text-1);
+        }
+        
+        &-info {
+            & span {
+                a {
+                    display: block;
+                    color: var(--ztc-text-text-1);
+                    margin-bottom: 10px;
+                    i {
+                        margin: 0 4px 0 0;
+                    }
+                }
+            }
+        }
+        &-sm-title{
+            font-size: var(--ztc-font-size-font-s24);
+            color: var(--ztc-text-text-1);
+        }
+        &-social{
+            &  a{
+                display: inline-block;
+                text-align: center;
+                width: 40px;
+                height: 40px;
+                line-height: 40px;
+                border-radius: 40px;
+                color: var(--ztc-text-text-1);
+                border: 1px solid var(--ztc-text-text-1);
+                font-size: 14px;
+            }
+        }
+    
+        &-overlay{
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 50;
+            width: 100%;
+            height: 100%;
+            visibility: hidden;
+            opacity: 0;
+            transition: 0.45 easc-in-out;
+            background: rgba(24, 24, 24, 0.4);
+            &-open{
+                opacity: .7;
+                visibility: visible;
+            }
+        }
+       .vl-offcanvas-logo {
+        height: 50px;
+        width: 164px;
+        object-fit: contain;
+        filter: brightness(0) invert(1);
+       }
+    .vl-offcanvas-close {
+        button {
+            border: none;
+            background: none;
+            outline: none;
+            color: var(--ztc-text-text-1);
+        }
+    }
+    }
+    
+    .vl-offcanvas-menu ul {
+        list-style: none;
+        & li{
+            position: relative;
+            
+            & a{
+                padding: 8px 0;
+                display: block;
+                font-size: var(--ztc-font-size-font-s18);
+                font-weight: var(--ztc-weight-medium);
+                color: var(--ztc-text-text-1);
+                transition: all .4s;
+                & span{
+                    display: block;
+                }
+            }
+            & > a{
+                border-bottom: none;
+            }
+            &.active{
+                & > a{
+                    color: var(--ztc-text-text-1);
+                }
+                & > .vl-menu-close{
+                    & i{
+                        transform: rotate(90deg);
+                    }
+                }
+            }
+    
+            & .sub-menu{
+                display: none;
+                padding-left: 20px;
+            }
+        }
+    }
+    .vl-menu-close{
+        position: absolute;
+        right: 0;
+        top: 7px;
+        border: 1px solid var(--ztc-text-text-1);
+        height: 30px;
+        width: 30px;
+        text-align: center;
+        font-size: 12px;
+        line-height: 25px;
+        background: transparent;
+        color: var(--ztc-text-text-1);
+        border-radius: 4px;
+        & i{
+            transition: .3s;
+        }
+    }
+}
+
+// Homepage 03 //
+.homepage3-body {
+.vl-header-action-item {
+    float: right;
+    border: 1px solid var(--ztc-text-text-1);
+    padding: 6px;
+    border-radius: 4px;
+    color: var(--ztc-text-text-1);
+    button {
+        border: none;
+        outline: none;
+        background: none;
+        transition: all .4s;
+        color: var(--ztc-text-text-1);
+        font-size: var(--ztc-font-size-font-s20);
+    }
+}
+    .vl-offcanvas {
+        position: fixed;
+        background: var(--ztc-bg-bg-9);
+        width: 450px;
+        z-index: 99;
+        right: 0;
+        top: 0;
+        padding: 50px 40px;
+        height: 100%;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateX(100%);
+        transition: .3s;
+        overflow-y: scroll;
+        overscroll-behavior-y: contain;
+        scrollbar-width: none;
+        @media only screen and (max-width:450px){
+            width: 100%;
+        }
+        &-open{
+            opacity: 1;
+            visibility: visible;
+            transform: translateX(0);
+        }
+        &-close-toggle{
+            font-size: var(--ztc-font-size-font-s30);
+            color: var(--vl-heading-color);
+        }
+        &-header{
+            @media #{$lg,$md,$xs}{
+                margin-bottom: 40px;
+            }
+    
+        }
+       
+        &-title{
+            font-size: 35px;
+            color: var(--ztc-text-text-1);
+        }
+        
+        &-info {
+            & span {
+                a {
+                    display: block;
+                    color: var(--ztc-text-text-1);
+                    margin-bottom: 10px;
+                    i {
+                        margin: 0 4px 0 0;
+                    }
+                }
+            }
+        }
+        &-sm-title{
+            font-size: var(--ztc-font-size-font-s24);
+            color: var(--ztc-text-text-1);
+        }
+        &-social{
+            &  a{
+                display: inline-block;
+                text-align: center;
+                width: 40px;
+                height: 40px;
+                line-height: 40px;
+                border-radius: 40px;
+                color: var(--ztc-text-text-1);
+                border: 1px solid var(--ztc-text-text-1);
+                font-size: 14px;
+            }
+        }
+    
+        &-overlay{
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 50;
+            width: 100%;
+            height: 100%;
+            visibility: hidden;
+            opacity: 0;
+            transition: 0.45 easc-in-out;
+            background: rgba(24, 24, 24, 0.4);
+            &-open{
+                opacity: .7;
+                visibility: visible;
+            }
+        }
+       .vl-offcanvas-logo {
+        height: 50px;
+        width: 164px;
+        object-fit: contain;
+        filter: brightness(0) invert(1);
+       }
+    .vl-offcanvas-close {
+        button {
+            border: none;
+            background: none;
+            outline: none;
+            color: var(--ztc-text-text-1);
+        }
+    }
+    }
+    
+    .vl-offcanvas-menu ul {
+        list-style: none;
+        & li{
+            position: relative;
+            
+            & a{
+                padding: 8px 0;
+                display: block;
+                font-size: var(--ztc-font-size-font-s18);
+                font-weight: var(--ztc-weight-medium);
+                color: var(--ztc-text-text-1);
+                transition: all .4s;
+                & span{
+                    display: block;
+                }
+            }
+            & > a{
+                border-bottom: none;
+            }
+            &.active{
+                & > a{
+                    color: var(--ztc-text-text-1);
+                }
+                & > .vl-menu-close{
+                    & i{
+                        transform: rotate(90deg);
+                    }
+                }
+            }
+    
+            & .sub-menu{
+                display: none;
+                padding-left: 20px;
+            }
+        }
+    }
+    .vl-menu-close{
+        position: absolute;
+        right: 0;
+        top: 7px;
+        border: 1px solid var(--ztc-text-text-1);
+        height: 30px;
+        width: 30px;
+        text-align: center;
+        font-size: 12px;
+        line-height: 25px;
+        background: transparent;
+        color: var(--ztc-text-text-1);
+        border-radius: 4px;
+        & i{
+            transition: .3s;
+        }
+    }
+}
+
+// Homepage 04 //
+.homepage4-body {
+.vl-header-action-item {
+    float: right;
+    border: 1px solid var(--ztc-text-text-11);
+    padding: 6px;
+    border-radius: 4px;
+    color: var(--ztc-text-text-11);
+    button {
+        border: none;
+        outline: none;
+        background: none;
+        transition: all .4s;
+        color: var(--ztc-text-text-11);
+        font-size: var(--ztc-font-size-font-s20);
+    }
+}
+    .vl-offcanvas {
+        position: fixed;
+        background: var(--ztc-bg-bg-14);
+        width: 450px;
+        z-index: 99;
+        right: 0;
+        top: 0;
+        padding: 50px 40px;
+        height: 100%;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateX(100%);
+        transition: .3s;
+        overflow-y: scroll;
+        overscroll-behavior-y: contain;
+        scrollbar-width: none;
+        @media only screen and (max-width:450px){
+            width: 100%;
+        }
+        &-open{
+            opacity: 1;
+            visibility: visible;
+            transform: translateX(0);
+        }
+        &-close-toggle{
+            font-size: var(--ztc-font-size-font-s30);
+            color: var(--vl-heading-color);
+        }
+        &-header{
+            @media #{$lg,$md,$xs}{
+                margin-bottom: 40px;
+            }
+    
+        }
+       
+        &-title{
+            font-size: 35px;
+            color: var(--ztc-text-text-1);
+        }
+        
+        &-info {
+            & span {
+                a {
+                    display: block;
+                    color: var(--ztc-text-text-1);
+                    margin-bottom: 10px;
+                    i {
+                        margin: 0 4px 0 0;
+                    }
+                }
+            }
+        }
+        &-sm-title{
+            font-size: var(--ztc-font-size-font-s24);
+            color: var(--ztc-text-text-1);
+        }
+        &-social{
+            &  a{
+                display: inline-block;
+                text-align: center;
+                width: 40px;
+                height: 40px;
+                line-height: 40px;
+                border-radius: 40px;
+                color: var(--ztc-text-text-1);
+                border: 1px solid var(--ztc-text-text-1);
+                font-size: 14px;
+            }
+        }
+    
+        &-overlay{
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 50;
+            width: 100%;
+            height: 100%;
+            visibility: hidden;
+            opacity: 0;
+            transition: 0.45 easc-in-out;
+            background: rgba(24, 24, 24, 0.4);
+            &-open{
+                opacity: .7;
+                visibility: visible;
+            }
+        }
+       .vl-offcanvas-logo {
+        height: 50px;
+        width: 164px;
+        object-fit: contain;
+        filter: brightness(0) invert(1);
+       }
+    .vl-offcanvas-close {
+        button {
+            border: none;
+            background: none;
+            outline: none;
+            color: var(--ztc-text-text-1);
+        }
+    }
+    }
+    
+    .vl-offcanvas-menu ul {
+        list-style: none;
+        & li{
+            position: relative;
+            
+            & a{
+                padding: 8px 0;
+                display: block;
+                font-size: var(--ztc-font-size-font-s18);
+                font-weight: var(--ztc-weight-medium);
+                color: var(--ztc-text-text-1);
+                transition: all .4s;
+                & span{
+                    display: block;
+                }
+            }
+            & > a{
+                border-bottom: none;
+            }
+            &.active{
+                & > a{
+                    color: var(--ztc-text-text-1);
+                }
+                & > .vl-menu-close{
+                    & i{
+                        transform: rotate(90deg);
+                    }
+                }
+            }
+    
+            & .sub-menu{
+                display: none;
+                padding-left: 20px;
+            }
+        }
+    }
+    .vl-menu-close{
+        position: absolute;
+        right: 0;
+        top: 7px;
+        border: 1px solid var(--ztc-text-text-1);
+        height: 30px;
+        width: 30px;
+        text-align: center;
+        font-size: 12px;
+        line-height: 25px;
+        background: transparent;
+        color: var(--ztc-text-text-1);
+        border-radius: 4px;
+        & i{
+            transition: .3s;
+        }
+    }
+}
+
+// Homepage 05 //
+.homepage5-body {
+.vl-header-action-item {
+    float: right;
+    border: 1px solid var(--ztc-text-text-14);
+    padding: 6px;
+    border-radius: 4px;
+    color: var(--ztc-text-text-14);
+    button {
+        border: none;
+        outline: none;
+        background: none;
+        transition: all .4s;
+        color: var(--ztc-text-text-14);
+        font-size: var(--ztc-font-size-font-s20);
+    }
+}
+    .vl-offcanvas {
+        position: fixed;
+        background: var(--ztc-bg-bg-17);
+        width: 450px;
+        z-index: 99;
+        right: 0;
+        top: 0;
+        padding: 50px 40px;
+        height: 100%;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateX(100%);
+        transition: .3s;
+        overflow-y: scroll;
+        overscroll-behavior-y: contain;
+        scrollbar-width: none;
+        @media only screen and (max-width:450px){
+            width: 100%;
+        }
+        &-open{
+            opacity: 1;
+            visibility: visible;
+            transform: translateX(0);
+        }
+        &-close-toggle{
+            font-size: var(--ztc-font-size-font-s30);
+            color: var(--vl-heading-color);
+        }
+        &-header{
+            @media #{$lg,$md,$xs}{
+                margin-bottom: 40px;
+            }
+    
+        }
+       
+        &-title{
+            font-size: 35px;
+            color: var(--ztc-text-text-1);
+        }
+        
+        &-info {
+            & span {
+                a {
+                    display: block;
+                    color: var(--ztc-text-text-1);
+                    margin-bottom: 10px;
+                    i {
+                        margin: 0 4px 0 0;
+                    }
+                }
+            }
+        }
+        &-sm-title{
+            font-size: var(--ztc-font-size-font-s24);
+            color: var(--ztc-text-text-1);
+        }
+        &-social{
+            &  a{
+                display: inline-block;
+                text-align: center;
+                width: 40px;
+                height: 40px;
+                line-height: 40px;
+                border-radius: 40px;
+                color: var(--ztc-text-text-1);
+                border: 1px solid var(--ztc-text-text-1);
+                font-size: 14px;
+            }
+        }
+    
+        &-overlay{
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 50;
+            width: 100%;
+            height: 100%;
+            visibility: hidden;
+            opacity: 0;
+            transition: 0.45 easc-in-out;
+            background: rgba(24, 24, 24, 0.4);
+            &-open{
+                opacity: .7;
+                visibility: visible;
+            }
+        }
+       .vl-offcanvas-logo {
+        height: 50px;
+        width: 164px;
+        object-fit: contain;
+        filter: brightness(0) invert(1);
+       }
+    .vl-offcanvas-close {
+        button {
+            border: none;
+            background: none;
+            outline: none;
+            color: var(--ztc-text-text-1);
+        }
+    }
+    }
+    
+    .vl-offcanvas-menu ul {
+        list-style: none;
+        & li{
+            position: relative;
+            
+            & a{
+                padding: 8px 0;
+                display: block;
+                font-size: var(--ztc-font-size-font-s18);
+                font-weight: var(--ztc-weight-medium);
+                color: var(--ztc-text-text-1);
+                transition: all .4s;
+                & span{
+                    display: block;
+                }
+            }
+            & > a{
+                border-bottom: none;
+            }
+            &.active{
+                & > a{
+                    color: var(--ztc-text-text-1);
+                }
+                & > .vl-menu-close{
+                    & i{
+                        transform: rotate(90deg);
+                    }
+                }
+            }
+    
+            & .sub-menu{
+                display: none;
+                padding-left: 20px;
+            }
+        }
+    }
+    .vl-menu-close{
+        position: absolute;
+        right: 0;
+        top: 7px;
+        border: 1px solid var(--ztc-text-text-1);
+        height: 30px;
+        width: 30px;
+        text-align: center;
+        font-size: 12px;
+        line-height: 25px;
+        background: transparent;
+        color: var(--ztc-text-text-1);
+        border-radius: 4px;
+        & i{
+            transition: .3s;
+        }
+    }
+}
+
+// Homepage 06 //
+.homepage6-body {
+.vl-header-action-item {
+    float: right;
+    border: 1px solid var(--ztc-text-text-14);
+    padding: 6px;
+    border-radius: 4px;
+    color: var(--ztc-text-text-14);
+    button {
+        border: none;
+        outline: none;
+        background: none;
+        transition: all .4s;
+        color: var(--ztc-text-text-14);
+        font-size: var(--ztc-font-size-font-s20);
+    }
+}
+    .vl-offcanvas {
+        position: fixed;
+        background: var(--ztc-bg-bg-18);
+        width: 450px;
+        z-index: 99;
+        right: 0;
+        top: 0;
+        padding: 50px 40px;
+        height: 100%;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateX(100%);
+        transition: .3s;
+        overflow-y: scroll;
+        overscroll-behavior-y: contain;
+        scrollbar-width: none;
+        @media only screen and (max-width:450px){
+            width: 100%;
+        }
+        &-open{
+            opacity: 1;
+            visibility: visible;
+            transform: translateX(0);
+        }
+        &-close-toggle{
+            font-size: var(--ztc-font-size-font-s30);
+            color: var(--vl-heading-color);
+        }
+        &-header{
+            @media #{$lg,$md,$xs}{
+                margin-bottom: 40px;
+            }
+    
+        }
+       
+        &-title{
+            font-size: 35px;
+            color: var(--ztc-text-text-1);
+        }
+        
+        &-info {
+            & span {
+                a {
+                    display: block;
+                    color: var(--ztc-text-text-1);
+                    margin-bottom: 10px;
+                    i {
+                        margin: 0 4px 0 0;
+                    }
+                }
+            }
+        }
+        &-sm-title{
+            font-size: var(--ztc-font-size-font-s24);
+            color: var(--ztc-text-text-1);
+        }
+        &-social{
+            &  a{
+                display: inline-block;
+                text-align: center;
+                width: 40px;
+                height: 40px;
+                line-height: 40px;
+                border-radius: 40px;
+                color: var(--ztc-text-text-1);
+                border: 1px solid var(--ztc-text-text-1);
+                font-size: 14px;
+            }
+        }
+    
+        &-overlay{
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 50;
+            width: 100%;
+            height: 100%;
+            visibility: hidden;
+            opacity: 0;
+            transition: 0.45 easc-in-out;
+            background: rgba(24, 24, 24, 0.4);
+            &-open{
+                opacity: .7;
+                visibility: visible;
+            }
+        }
+       .vl-offcanvas-logo {
+        height: 50px;
+        width: 164px;
+        object-fit: contain;
+        filter: brightness(0) invert(1);
+       }
+    .vl-offcanvas-close {
+        button {
+            border: none;
+            background: none;
+            outline: none;
+            color: var(--ztc-text-text-1);
+        }
+    }
+    }
+    
+    .vl-offcanvas-menu ul {
+        list-style: none;
+        & li{
+            position: relative;
+            
+            & a{
+                padding: 8px 0;
+                display: block;
+                font-size: var(--ztc-font-size-font-s18);
+                font-weight: var(--ztc-weight-medium);
+                color: var(--ztc-text-text-1);
+                transition: all .4s;
+                & span{
+                    display: block;
+                }
+            }
+            & > a{
+                border-bottom: none;
+            }
+            &.active{
+                & > a{
+                    color: var(--ztc-text-text-1);
+                }
+                & > .vl-menu-close{
+                    & i{
+                        transform: rotate(90deg);
+                    }
+                }
+            }
+    
+            & .sub-menu{
+                display: none;
+                padding-left: 20px;
+            }
+        }
+    }
+    .vl-menu-close{
+        position: absolute;
+        right: 0;
+        top: 7px;
+        border: 1px solid var(--ztc-text-text-1);
+        height: 30px;
+        width: 30px;
+        text-align: center;
+        font-size: 12px;
+        line-height: 25px;
+        background: transparent;
+        color: var(--ztc-text-text-1);
+        border-radius: 4px;
+        & i{
+            transition: .3s;
+        }
+    }
+}
+
+// Homepage 07 //
+.homepage7-body {
+.vl-header-action-item {
+    float: right;
+    border: 1px solid var(--ztc-text-text-1);
+    padding: 6px;
+    border-radius: 4px;
+    color: var(--ztc-text-text-1);
+    button {
+        border: none;
+        outline: none;
+        background: none;
+        transition: all .4s;
+        color: var(--ztc-text-text-1);
+        font-size: var(--ztc-font-size-font-s20);
+    }
+}
+    .vl-offcanvas {
+        position: fixed;
+        background: var(--ztc-bg-bg-16);
+        width: 450px;
+        z-index: 99;
+        right: 0;
+        top: 0;
+        padding: 50px 40px;
+        height: 100%;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateX(100%);
+        transition: .3s;
+        overflow-y: scroll;
+        overscroll-behavior-y: contain;
+        scrollbar-width: none;
+        @media only screen and (max-width:450px){
+            width: 100%;
+        }
+        &-open{
+            opacity: 1;
+            visibility: visible;
+            transform: translateX(0);
+        }
+        &-close-toggle{
+            font-size: var(--ztc-font-size-font-s30);
+            color: var(--vl-heading-color);
+        }
+        &-header{
+            @media #{$lg,$md,$xs}{
+                margin-bottom: 40px;
+            }
+    
+        }
+       
+        &-title{
+            font-size: 35px;
+            color: var(--ztc-text-text-1);
+        }
+        
+        &-info {
+            & span {
+                a {
+                    display: block;
+                    color: var(--ztc-text-text-1);
+                    margin-bottom: 10px;
+                    i {
+                        margin: 0 4px 0 0;
+                    }
+                }
+            }
+        }
+        &-sm-title{
+            font-size: var(--ztc-font-size-font-s24);
+            color: var(--ztc-text-text-1);
+        }
+        &-social{
+            &  a{
+                display: inline-block;
+                text-align: center;
+                width: 40px;
+                height: 40px;
+                line-height: 40px;
+                border-radius: 40px;
+                color: var(--ztc-text-text-1);
+                border: 1px solid var(--ztc-text-text-1);
+                font-size: 14px;
+            }
+        }
+    
+        &-overlay{
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 50;
+            width: 100%;
+            height: 100%;
+            visibility: hidden;
+            opacity: 0;
+            transition: 0.45 easc-in-out;
+            background: rgba(24, 24, 24, 0.4);
+            &-open{
+                opacity: .7;
+                visibility: visible;
+            }
+        }
+       .vl-offcanvas-logo {
+        height: 50px;
+        width: 164px;
+        object-fit: contain;
+        filter: brightness(0) invert(1);
+       }
+    .vl-offcanvas-close {
+        button {
+            border: none;
+            background: none;
+            outline: none;
+            color: var(--ztc-text-text-1);
+        }
+    }
+    }
+    
+    .vl-offcanvas-menu ul {
+        list-style: none;
+        & li{
+            position: relative;
+            
+            & a{
+                padding: 8px 0;
+                display: block;
+                font-size: var(--ztc-font-size-font-s18);
+                font-weight: var(--ztc-weight-medium);
+                color: var(--ztc-text-text-1);
+                transition: all .4s;
+                & span{
+                    display: block;
+                }
+            }
+            & > a{
+                border-bottom: none;
+            }
+            &.active{
+                & > a{
+                    color: var(--ztc-text-text-1);
+                }
+                & > .vl-menu-close{
+                    & i{
+                        transform: rotate(90deg);
+                    }
+                }
+            }
+    
+            & .sub-menu{
+                display: none;
+                padding-left: 20px;
+            }
+        }
+    }
+    .vl-menu-close{
+        position: absolute;
+        right: 0;
+        top: 7px;
+        border: 1px solid var(--ztc-text-text-1);
+        height: 30px;
+        width: 30px;
+        text-align: center;
+        font-size: 12px;
+        line-height: 25px;
+        background: transparent;
+        color: var(--ztc-text-text-1);
+        border-radius: 4px;
+        & i{
+            transition: .3s;
+        }
+    }
+}
+// Homepage 08 //
+.homepage8-body {
+.vl-header-action-item {
+    float: right;
+    border: 1px solid var(--ztc-text-text-14);
+    padding: 6px;
+    border-radius: 4px;
+    color: var(--ztc-text-text-14);
+    button {
+        border: none;
+        outline: none;
+        background: none;
+        transition: all .4s;
+        color: var(--ztc-text-text-14);
+        font-size: var(--ztc-font-size-font-s20);
+    }
+}
+    .vl-offcanvas {
+        position: fixed;
+        background: var(--ztc-bg-bg-16);
+        width: 450px;
+        z-index: 99;
+        right: 0;
+        top: 0;
+        padding: 50px 40px;
+        height: 100%;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateX(100%);
+        transition: .3s;
+        overflow-y: scroll;
+        overscroll-behavior-y: contain;
+        scrollbar-width: none;
+        @media only screen and (max-width:450px){
+            width: 100%;
+        }
+        &-open{
+            opacity: 1;
+            visibility: visible;
+            transform: translateX(0);
+        }
+        &-close-toggle{
+            font-size: var(--ztc-font-size-font-s30);
+            color: var(--vl-heading-color);
+        }
+        &-header{
+            @media #{$lg,$md,$xs}{
+                margin-bottom: 40px;
+            }
+    
+        }
+       
+        &-title{
+            font-size: 35px;
+            color: var(--ztc-text-text-1);
+        }
+        
+        &-info {
+            & span {
+                a {
+                    display: block;
+                    color: var(--ztc-text-text-1);
+                    margin-bottom: 10px;
+                    i {
+                        margin: 0 4px 0 0;
+                    }
+                }
+            }
+        }
+        &-sm-title{
+            font-size: var(--ztc-font-size-font-s24);
+            color: var(--ztc-text-text-1);
+        }
+        &-social{
+            &  a{
+                display: inline-block;
+                text-align: center;
+                width: 40px;
+                height: 40px;
+                line-height: 40px;
+                border-radius: 40px;
+                color: var(--ztc-text-text-1);
+                border: 1px solid var(--ztc-text-text-1);
+                font-size: 14px;
+            }
+        }
+    
+        &-overlay{
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 50;
+            width: 100%;
+            height: 100%;
+            visibility: hidden;
+            opacity: 0;
+            transition: 0.45 easc-in-out;
+            background: rgba(24, 24, 24, 0.4);
+            &-open{
+                opacity: .7;
+                visibility: visible;
+            }
+        }
+       .vl-offcanvas-logo {
+        height: 50px;
+        width: 164px;
+        object-fit: contain;
+        filter: brightness(0) invert(1);
+       }
+    .vl-offcanvas-close {
+        button {
+            border: none;
+            background: none;
+            outline: none;
+            color: var(--ztc-text-text-1);
+        }
+    }
+    }
+    
+    .vl-offcanvas-menu ul {
+        list-style: none;
+        & li{
+            position: relative;
+            
+            & a{
+                padding: 8px 0;
+                display: block;
+                font-size: var(--ztc-font-size-font-s18);
+                font-weight: var(--ztc-weight-medium);
+                color: var(--ztc-text-text-1);
+                transition: all .4s;
+                & span{
+                    display: block;
+                }
+            }
+            & > a{
+                border-bottom: none;
+            }
+            &.active{
+                & > a{
+                    color: var(--ztc-text-text-1);
+                }
+                & > .vl-menu-close{
+                    & i{
+                        transform: rotate(90deg);
+                    }
+                }
+            }
+    
+            & .sub-menu{
+                display: none;
+                padding-left: 20px;
+            }
+        }
+    }
+    .vl-menu-close{
+        position: absolute;
+        right: 0;
+        top: 7px;
+        border: 1px solid var(--ztc-text-text-1);
+        height: 30px;
+        width: 30px;
+        text-align: center;
+        font-size: 12px;
+        line-height: 25px;
+        background: transparent;
+        color: var(--ztc-text-text-1);
+        border-radius: 4px;
+        & i{
+            transition: .3s;
+        }
+    }
+}
+
+// Homepage 09 //
+.homepage9-body {
+.vl-header-action-item {
+    float: right;
+    border: 1px solid var(--ztc-text-text-14);
+    padding: 6px;
+    border-radius: 4px;
+    color: var(--ztc-text-text-14);
+    button {
+        border: none;
+        outline: none;
+        background: none;
+        transition: all .4s;
+        color: var(--ztc-text-text-14);
+        font-size: var(--ztc-font-size-font-s20);
+    }
+}
+    .vl-offcanvas {
+        position: fixed;
+        background: var(--ztc-bg-bg-17);
+        width: 450px;
+        z-index: 99;
+        right: 0;
+        top: 0;
+        padding: 50px 40px;
+        height: 100%;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateX(100%);
+        transition: .3s;
+        overflow-y: scroll;
+        overscroll-behavior-y: contain;
+        scrollbar-width: none;
+        @media only screen and (max-width:450px){
+            width: 100%;
+        }
+        &-open{
+            opacity: 1;
+            visibility: visible;
+            transform: translateX(0);
+        }
+        &-close-toggle{
+            font-size: var(--ztc-font-size-font-s30);
+            color: var(--vl-heading-color);
+        }
+        &-header{
+            @media #{$lg,$md,$xs}{
+                margin-bottom: 40px;
+            }
+    
+        }
+       
+        &-title{
+            font-size: 35px;
+            color: var(--ztc-text-text-1);
+        }
+        
+        &-info {
+            & span {
+                a {
+                    display: block;
+                    color: var(--ztc-text-text-1);
+                    margin-bottom: 10px;
+                    i {
+                        margin: 0 4px 0 0;
+                    }
+                }
+            }
+        }
+        &-sm-title{
+            font-size: var(--ztc-font-size-font-s24);
+            color: var(--ztc-text-text-1);
+        }
+        &-social{
+            &  a{
+                display: inline-block;
+                text-align: center;
+                width: 40px;
+                height: 40px;
+                line-height: 40px;
+                border-radius: 40px;
+                color: var(--ztc-text-text-1);
+                border: 1px solid var(--ztc-text-text-1);
+                font-size: 14px;
+            }
+        }
+    
+        &-overlay{
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 50;
+            width: 100%;
+            height: 100%;
+            visibility: hidden;
+            opacity: 0;
+            transition: 0.45 easc-in-out;
+            background: rgba(24, 24, 24, 0.4);
+            &-open{
+                opacity: .7;
+                visibility: visible;
+            }
+        }
+       .vl-offcanvas-logo {
+        height: 50px;
+        width: 164px;
+        object-fit: contain;
+        filter: brightness(0) invert(1);
+       }
+    .vl-offcanvas-close {
+        button {
+            border: none;
+            background: none;
+            outline: none;
+            color: var(--ztc-text-text-1);
+        }
+    }
+    }
+    
+    .vl-offcanvas-menu ul {
+        list-style: none;
+        & li{
+            position: relative;
+            
+            & a{
+                padding: 8px 0;
+                display: block;
+                font-size: var(--ztc-font-size-font-s18);
+                font-weight: var(--ztc-weight-medium);
+                color: var(--ztc-text-text-1);
+                transition: all .4s;
+                & span{
+                    display: block;
+                }
+            }
+            & > a{
+                border-bottom: none;
+            }
+            &.active{
+                & > a{
+                    color: var(--ztc-text-text-1);
+                }
+                & > .vl-menu-close{
+                    & i{
+                        transform: rotate(90deg);
+                    }
+                }
+            }
+    
+            & .sub-menu{
+                display: none;
+                padding-left: 20px;
+            }
+        }
+    }
+    .vl-menu-close{
+        position: absolute;
+        right: 0;
+        top: 7px;
+        border: 1px solid var(--ztc-text-text-1);
+        height: 30px;
+        width: 30px;
+        text-align: center;
+        font-size: 12px;
+        line-height: 25px;
+        background: transparent;
+        color: var(--ztc-text-text-1);
+        border-radius: 4px;
+        & i{
+            transition: .3s;
+        }
+    }
+}
+
+// Homepage 09 //
+.homepage10-body {
+.vl-header-action-item {
+    float: right;
+    border: 1px solid var(--ztc-text-text-14);
+    padding: 6px;
+    border-radius: 4px;
+    color: var(--ztc-text-text-14);
+    button {
+        border: none;
+        outline: none;
+        background: none;
+        transition: all .4s;
+        color: var(--ztc-text-text-14);
+        font-size: var(--ztc-font-size-font-s20);
+    }
+}
+    .vl-offcanvas {
+        position: fixed;
+        background: var(--ztc-bg-bg-22);
+        width: 450px;
+        z-index: 99;
+        right: 0;
+        top: 0;
+        padding: 50px 40px;
+        height: 100%;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateX(100%);
+        transition: .3s;
+        overflow-y: scroll;
+        overscroll-behavior-y: contain;
+        scrollbar-width: none;
+        @media only screen and (max-width:450px){
+            width: 100%;
+        }
+        &-open{
+            opacity: 1;
+            visibility: visible;
+            transform: translateX(0);
+        }
+        &-close-toggle{
+            font-size: var(--ztc-font-size-font-s30);
+            color: var(--vl-heading-color);
+        }
+        &-header{
+            @media #{$lg,$md,$xs}{
+                margin-bottom: 40px;
+            }
+    
+        }
+       
+        &-title{
+            font-size: 35px;
+            color: var(--ztc-text-text-1);
+        }
+        
+        &-info {
+            & span {
+                a {
+                    display: block;
+                    color: var(--ztc-text-text-1);
+                    margin-bottom: 10px;
+                    i {
+                        margin: 0 4px 0 0;
+                    }
+                }
+            }
+        }
+        &-sm-title{
+            font-size: var(--ztc-font-size-font-s24);
+            color: var(--ztc-text-text-1);
+        }
+        &-social{
+            &  a{
+                display: inline-block;
+                text-align: center;
+                width: 40px;
+                height: 40px;
+                line-height: 40px;
+                border-radius: 40px;
+                color: var(--ztc-text-text-1);
+                border: 1px solid var(--ztc-text-text-1);
+                font-size: 14px;
+            }
+        }
+    
+        &-overlay{
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 50;
+            width: 100%;
+            height: 100%;
+            visibility: hidden;
+            opacity: 0;
+            transition: 0.45 easc-in-out;
+            background: rgba(24, 24, 24, 0.4);
+            &-open{
+                opacity: .7;
+                visibility: visible;
+            }
+        }
+       .vl-offcanvas-logo {
+        height: 50px;
+        width: 164px;
+        object-fit: contain;
+        filter: brightness(0) invert(1);
+       }
+    .vl-offcanvas-close {
+        button {
+            border: none;
+            background: none;
+            outline: none;
+            color: var(--ztc-text-text-1);
+        }
+    }
+    }
+    
+    .vl-offcanvas-menu ul {
+        list-style: none;
+        & li{
+            position: relative;
+            
+            & a{
+                padding: 8px 0;
+                display: block;
+                font-size: var(--ztc-font-size-font-s18);
+                font-weight: var(--ztc-weight-medium);
+                color: var(--ztc-text-text-1);
+                transition: all .4s;
+                & span{
+                    display: block;
+                }
+            }
+            & > a{
+                border-bottom: none;
+            }
+            &.active{
+                & > a{
+                    color: var(--ztc-text-text-1);
+                }
+                & > .vl-menu-close{
+                    & i{
+                        transform: rotate(90deg);
+                    }
+                }
+            }
+    
+            & .sub-menu{
+                display: none;
+                padding-left: 20px;
+            }
+        }
+    }
+    .vl-menu-close{
+        position: absolute;
+        right: 0;
+        top: 7px;
+        border: 1px solid var(--ztc-text-text-1);
+        height: 30px;
+        width: 30px;
+        text-align: center;
+        font-size: 12px;
+        line-height: 25px;
+        background: transparent;
+        color: var(--ztc-text-text-1);
+        border-radius: 4px;
+        & i{
+            transition: .3s;
+        }
+    }
+}
+/*============= MOBILE MENU CSS AREA ===============*/

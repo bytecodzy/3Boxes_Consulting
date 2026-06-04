@@ -1,0 +1,25 @@
+# Dependencies
+node_modules/
+
+# Environment variables (NEVER push secrets to GitHub)
+.env
+
+# Logs
+*.log
+npm-debug.log*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Build / temp
+tmp/
+.vercel/
+
+# Old backend (keeping for local dev reference, not deployed)
+backend/node_modules/
+backend/.env

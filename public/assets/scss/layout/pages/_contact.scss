@@ -1,0 +1,331 @@
+@use '../../utils/' as * ;
+
+/*============= CONTACT CSS AREA ===============*/
+.contact2 {
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    .heading2 {
+        padding: 0 70px 0 0;
+        @media #{$xs} {
+            padding: 0;
+            margin-bottom: 30px;
+        }
+        @media #{$md} {
+            padding: 0;
+            margin-bottom: 30px;
+        }
+        .ot-con-boxarea {
+            display: flex;
+            align-items: center;
+            &:hover {
+                .icons {
+                    background: var(--ztc-bg-bg-6);
+                    transition: all .4s;
+                    transform: rotateY(-180deg);
+                    svg {
+                        filter: brightness(0) invert(1);
+                        transition: all .4s;
+                    }
+                }
+            }
+            .icons {
+                background: rgba(40, 170, 74, 0.08);  
+                height: 50px;
+                width: 50px;
+                text-align: center;
+                line-height: 50px;
+                display: inline-block;
+                transition: all .4s;
+                border-radius: 50%;
+                svg {
+                    transition: all .4s;
+                }
+            }
+            .text {
+                padding-left: 16px;
+                a {
+                    color: var(--ztc-text-text-5);
+                    font-family: var(--ztc-family-font1);
+                    font-size: var(--ztc-font-size-font-s22);
+                    font-style: normal;
+                    font-weight: var(--ztc-weight-bold);
+                    line-height: 22px;
+                    display: inline-block;
+                    transition: all .4s;
+                    &:hover {
+                        color: var(--ztc-text-text-7);
+                        transition: all .4s;
+                    }     
+                }
+            }
+        }
+    }
+
+    .contact-widget-boxarea {
+        position: relative;
+        z-index: 1;
+        background: var(--ztc-bg-bg-8);
+        border-radius: 10px;
+        padding: 32px 24px;
+        .input-area {
+            h4 {
+                color: var(--ztc-text-text-5);
+                font-family: var(--ztc-family-font1);
+                font-size: var(--ztc-font-size-font-s18);
+                font-style: normal;
+                font-weight: var(--ztc-weight-semibold);
+                line-height: 16px;
+            }
+            input {
+                color: var(--ztc-text-text-6);
+                font-family: var(--ztc-family-font1);
+                font-size: var(--ztc-font-size-font-s16);
+                font-style: normal;
+                font-weight: var(--ztc-weight-medium);
+                line-height: 16px;
+                background: var(--ztc-bg-bg-1);
+                padding: 20px 16px;  
+                border-radius: 8px;
+                border: 1px solid rgba(11, 24, 42, 0.10);
+                width: 100%;
+            }
+
+             textarea {
+                color: var(--ztc-text-text-6);
+                font-family: var(--ztc-family-font1);
+                font-size: var(--ztc-font-size-font-s16);
+                font-style: normal;
+                font-weight: var(--ztc-weight-medium);
+                line-height: 16px;
+                background: var(--ztc-bg-bg-1);
+                padding: 20px 16px;  
+                border-radius: 8px;
+                border: 1px solid rgba(11, 24, 42, 0.10);
+                width: 100%;
+                height: 150px;
+            }
+            button {
+                border: none;
+                outline: none;
+                
+            }
+        }
+    }
+}
+
+// Inner pages //
+.contact-inner-area {
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    .single-box {
+        background: var(--ztc-bg-bg-4);
+        border-radius: 8px;
+        padding: 24px;
+        display: flex;
+        align-items: center;
+        margin-bottom: 30px;
+        transition: all .4s;
+        &:hover {
+            transition: all .4s;
+            .icons {
+                background: var(--ztc-bg-bg-3);
+                transition: all .4s;
+                transform: rotateY(-180deg);
+            }
+            .text {
+                h4 {
+                    color: var(--ztc-text-text-2);
+                    transition: all .4s;
+                }
+                a {
+                    color: var(--ztc-text-text-2);
+                    transition: all .4s;
+                    opacity: 70%;
+                }
+            }
+        }
+        .icons {
+            height: 60px;
+            width: 60px;
+            text-align: center;
+            line-height: 60px;
+            display: inline-block;
+            transition: all .4s;
+            background: var(--ztc-bg-bg-2);
+            border-radius: 50%;
+            svg {
+                filter: brightness(0) invert(1);
+                transition: all .4s;
+            }
+        }
+        .text {
+            padding-left: 14px;
+            h4 {
+                color: var(--ztc-text-text-2);
+                font-family: var(--ztc-family-font1);
+                font-size: var(--ztc-font-size-font-s18);
+                font-style: normal;
+                font-weight: var(--ztc-weight-bold);
+                line-height: 18px;
+                text-transform: uppercase; 
+                transition: all .4s;       
+            }
+            a {
+                color: var(--ztc-text-text-3);
+                font-family: var(--ztc-family-font1);
+                font-size: var(--ztc-font-size-font-s18);
+                font-style: normal;
+                font-weight: var(--ztc-weight-medium);
+                line-height: 18px; 
+                display: inline-block;
+                transition: all .4s;     
+            }
+        }
+    }
+    .heading1 {
+        padding: 0 40px 0 0;
+        @media #{$xs} {
+            padding: 0;
+            margin-bottom: 30px;
+        }
+
+        @media #{$md} {
+            padding: 0;
+            margin-bottom: 30px;
+        }
+         .contact-social {
+            li {
+                display: inline-block;
+                margin: 0 6px 0 0;
+                &:nth-last-child(1) {
+                    margin: 0;
+                }
+                a {
+                    height: 36px;
+                    width: 36px;
+                    text-align: center;
+                    line-height: 36px;
+                    border-radius: 50%;
+                    background: var(--ztc-bg-bg-4);
+                    display: inline-block;
+                    font-size: var(--ztc-font-size-font-s18);
+                    transition: all .4s;
+                    color: var(--ztc-text-text-2);
+                    &:hover  {
+                        background: var(--ztc-bg-bg-3);
+                        color: var(--ztc-text-text-1);
+                        transition: all .4s;
+                    }
+                }
+            }
+        }
+    }
+
+    .contact-main-boxarea {
+        position: relative;
+        z-index: 1;
+        h3 {
+            color: var(--ztc-text-text-2);
+            font-family: var(--ztc-family-font1);
+            font-size: var(--ztc-font-size-font-s24);
+            font-style: normal;
+            font-weight: var(--ztc-weight-bold);
+            line-height: 24px;        
+        }
+
+        p {
+            color: var(--ztc-text-text-3);
+            font-family: var(--ztc-family-font1);
+            font-size: var(--ztc-font-size-font-s18);
+            font-style: normal;
+            font-weight: var(--ztc-weight-medium);
+            line-height: 24px;        
+        }
+        .input-area {
+            margin-top: 16px;
+            input {
+                color: var(--ztc-text-text-2);
+                font-family:var(--ztc-family-font1);
+                font-size: var(--ztc-font-size-font-s18);
+                font-style: normal;
+                font-weight: var(--ztc-weight-medium);
+                line-height: 18px; 
+                background: var(--ztc-bg-bg-4);
+                border-radius: 4px;
+                padding: 18px 16px;
+                width: 100%;
+                &::placeholder {
+                    color: var(--ztc-text-text-3);
+                    font-family:var(--ztc-family-font1);
+                    font-size: var(--ztc-font-size-font-s18);
+                    font-style: normal;
+                    font-weight: var(--ztc-weight-medium);
+                    line-height: 18px; 
+                } 
+            }
+            .nice-select {
+                color: var(--ztc-text-text-3);
+                font-family:var(--ztc-family-font1);
+                font-size: var(--ztc-font-size-font-s18);
+                font-style: normal;
+                font-weight: var(--ztc-weight-medium);
+                line-height: 18px; 
+                background: var(--ztc-bg-bg-4);
+                border-radius: 4px;
+                padding: 18px 16px;
+                width: 100%;
+                height: auto;
+                border: none;
+                box-shadow: none;
+                &::after {
+                    height: 7px;
+                    width: 7px;
+                    right: 16px;
+                }
+                ul {
+                    width: 100%;
+                }
+            }
+
+            textarea {
+                color: var(--ztc-text-text-2);
+                font-family:var(--ztc-family-font1);
+                font-size: var(--ztc-font-size-font-s18);
+                font-style: normal;
+                font-weight: var(--ztc-weight-medium);
+                line-height: 18px; 
+                background: var(--ztc-bg-bg-4);
+                border-radius: 4px;
+                padding: 18px 16px;
+                width: 100%;
+                height: 140px;
+                &::placeholder {
+                    color: var(--ztc-text-text-3);
+                    font-family:var(--ztc-family-font1);
+                    font-size: var(--ztc-font-size-font-s18);
+                    font-style: normal;
+                    font-weight: var(--ztc-weight-medium);
+                    line-height: 18px; 
+                } 
+            }
+            button {
+                border: none;
+                outline: none;
+            }
+        }
+    }
+    iframe {
+        width: 100%;
+        border-radius: 8px;
+        height: 500px;
+        @media #{$xs} {
+            height: 300px;
+        }
+        @media #{$md} {
+            height: 400px;
+        }
+    }
+}
+/*============= CONTACT CSS AREA ENDS===============*/

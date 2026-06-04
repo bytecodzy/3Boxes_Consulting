@@ -1,0 +1,193 @@
+@use '../../utils/' as * ;
+
+/*============= BENEFIT CSS AREA ===============*/
+.benefit1 {
+    position: relative;
+    z-index: 1;
+    margin: 0 55px;
+    border-radius: 10px;
+    @media #{$xl} {
+        margin: 0;
+        border-radius: 0;
+    }
+    @media #{$xxl} {
+        margin: 0 30px;
+    }
+    @media #{$md} {
+        margin: 0;
+        border-radius: 0;
+    }
+    @media #{$xs} {
+        margin: 0;
+        border-radius: 0;
+    }
+    .benefit-boxes-area {
+        padding: 0 40px 0 0;
+        @media #{$md} {
+            padding: 0;
+        }
+        @media #{$xs} {
+            padding: 0;
+        }
+        ul {
+            display: inline-block;
+            li {
+                margin-bottom: 30px;
+                &:nth-last-child(1) {
+                    margin-bottom: 0;
+                }
+                button {
+                    text-align: start;
+                    background: var(--ztc-bg-bg-1);
+                    border: 1px solid var(--ztc-bg-bg-1);
+                    padding: 20px 24px;
+                    border-radius: 8px;
+                    &.active {
+                        border: 1px solid var(--ztc-bg-bg-3);
+                        background: var(--ztc-bg-bg-1);
+                    }
+                    .button-content {
+                    .icons {
+                        height: 80px;
+                        width: 80px;
+                        text-align: center;
+                        line-height: 80px;
+                        display: inline-block;
+                        transition: all .4s;
+                        background: var(--ztc-bg-bg-4);
+                        border-radius: 50%;
+                        position: absolute;
+                        @media #{$xs} {
+                            position: relative;
+                        }
+                    }
+                    .text {
+                        padding-left: 94px;
+                        display: block;
+                        @media #{$xs} {
+                            padding-left: 0;
+                            padding-top: 24px;
+                        }
+                        .title {
+                            color: var(--ztc-text-text-2);
+                            font-family: var(--ztc-family-font1);
+                            font-size: var(--ztc-font-size-font-s24);
+                            font-style: normal;
+                            font-weight: var(--ztc-weight-bold);
+                            line-height: 24px; 
+                            display: block;
+                            transition: all .4s;
+                            padding-bottom: 16px;
+                        }
+                        .pera {
+                            color: var(--ztc-text-text-3);
+                            font-family: var(--ztc-family-font1);
+                            font-size: var(--ztc-font-size-font-s18);
+                            font-style: normal;
+                            font-weight: var(--ztc-weight-medium);
+                            line-height: 26px;
+                        }
+                    }
+                }
+                }
+            }
+        }
+    }
+    .benefit-images-area {
+        .tab-content {
+            .tab-pane {
+                &.fade.show.active {
+                    .images {
+                        img {
+                            transform: scale(1);
+                            transition: all .4s;
+                        }
+                    }
+                }
+               .images {
+                @media #{$xs} {
+                    margin-top: 30px;
+                }
+                @media #{$md} {
+                    margin-top: 30px;
+                }
+                img {
+                    height: 100%;
+                    width: 100%;
+                    object-fit: cover;
+                    border-radius: 8px;
+                    transform: scale(0.7);
+                    transition: all .4s;
+                }
+               } 
+            }
+        }
+    }
+}
+
+// Homepage 08 //
+.benefit8 {
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    .benfit8-boxarea {
+        background: var(--ztc-bg-bg-15);
+        border-radius: 30px;
+        padding: 32px;
+        text-align: center;
+        transition: all .4s;
+        margin-bottom: 30px;
+        &:hover {
+            background: var(--ztc-bg-bg-20);
+            transition: all .4s;
+            transform: translateY(-10px);
+            h5 {
+                background: var(--ztc-bg-bg-16);
+                color: var(--ztc-text-text-1);
+                transition: all .4s;
+                &::after {
+                    background: rgba(2, 17, 26, 0.20);
+                    transition: all .4s;
+                }
+            }
+        }
+        h5 {
+            color: var(--ztc-text-text-14);
+            font-family: var(--ztc-family-font1);
+            font-size: var(--ztc-font-size-font-s18);
+            font-style: normal;
+            font-weight: var(--ztc-weight-semibold);
+            height: 28px;
+            width: 28px;
+            text-align: center;
+            line-height: 28px;
+            background: var(--ztc-bg-bg-20);
+            border-radius: 50%;
+            margin: 0 auto;
+            position: relative;
+            transition: all .4s ;
+            &::after {
+                position: absolute;
+                content: "";
+                height: 42px;
+                width: 42px;
+                background: rgba(248, 206, 105, 0.20);
+                left: -7px;
+                top: -7px;
+                transition: all .4s;
+                border-radius: 50%;
+            }
+        }
+        a {
+            color: var(--ztc-text-text-14);
+            font-family: var(--ztc-family-font1);
+            font-size: var(--ztc-font-size-font-s24);
+            font-style: normal;
+            font-weight: var(--ztc-weight-bold);
+            line-height: 24px; 
+            display: inline-block;
+            transition: all .4s;
+        }
+    }
+}
+/*============= BENEFIT CSS AREA ENDS===============*/

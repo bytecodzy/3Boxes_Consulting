@@ -1,0 +1,230 @@
+@use '../../utils/' as * ;
+
+/*============= OTHERS CSS AREA STARTS ===============*/
+
+// Preloader //
+.preloader{
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 9999999999;
+	background-color: var(--ztc-text-text-1);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.loading-container,
+.loading{
+	height: 140px;
+	position: relative;
+	width: 140px;
+	border-radius: 100%;
+}
+
+.loading-container{
+	margin: 40px auto
+}
+
+.loading{
+	border: 1px solid transparent;
+	border-color: transparent var(--ztc-text-text-2) transparent var(--ztc-text-text-2);
+	animation: rotate-loading 2.5s linear 0s infinite normal;
+	transform-origin: 50% 50%;
+}
+.loading-container:hover .loading,
+.loading-container .loading{
+	transition: all 0.5s ease-in-out;
+}
+
+#loading-icon{
+	position: absolute;
+	top: 48%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+  height: 70px;
+  width: 70px;
+  animation: rotate-loading1 8.5s linear 0s infinite normal;
+  margin-top: -35px;
+  margin-left: -35px;
+}
+
+@keyframes rotate-loading{
+	0%{
+		transform: rotate(0deg);
+	}
+
+	100%{
+		transform: rotate(360deg);
+	}
+}
+
+
+@keyframes rotate-loading1{
+	0%{
+		transform: rotate(0deg);
+	}
+
+	100%{
+		transform: rotate(-360deg);
+	}
+}
+.loading1{
+	border: 1px solid transparent;
+	border-color: transparent var(--ztc-text-text-2) transparent var(--ztc-text-text-2);
+	animation: rotate-loading 1.5s linear 0s infinite normal;
+	transform-origin: 50% 50%;
+}
+// Progress Bar //
+.progress-wrap {
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    height: 56px;
+    width: 56px;
+    cursor: pointer;
+    display: block;
+    border-radius: 50px;
+    box-shadow: inset 0 0 0 2px rgba(0, 0, 0, 0.1);
+    z-index: 10000;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(15px);
+    -webkit-transition: all 200ms linear;
+    transition: all 200ms linear;
+    color: var(--ztc-text-text-1);
+   }
+   .progress-wrap.active-progress {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+   }
+   .progress-wrap::after {
+    position: absolute;
+    font-family: "FontAwesome";
+    content: "\f062";
+    text-align: center;
+    line-height: 56px;
+    font-size: 18px;
+    color: var(--ztc-text-text-2);
+    left: 0;
+    top: 0;
+    height: 56px;
+    width: 56px;
+    cursor: pointer;
+    display: block;
+    z-index: 1;
+    -webkit-transition: all 200ms linear;
+    transition: all 200ms linear;
+   }
+   .progress-wrap:hover::after {
+    opacity: 0;
+    color: var(--ztc-text-text-2);
+   }
+   .progress-wrap::before {
+    position: absolute;
+    font-family: "FontAwesome";
+    content: "\f062";
+    text-align: center;
+    line-height: 56px;
+    font-size: 18px;
+    opacity: 0;
+    left: 0;
+    top: 0;
+    height: 56px;
+    width: 56px;
+    cursor: pointer;
+    display: block;
+    z-index: 2;
+    -webkit-transition: all 200ms linear;
+    transition: all 200ms linear;
+   }
+   .progress-wrap:hover::before {
+    opacity: 1;
+    color: var(--ztc-text-text-2);
+   }
+   .progress-wrap svg path {
+    fill: none;
+   }
+   .progress-wrap svg.progress-circle path {
+    stroke: var(--ztc-text-text-2);
+    stroke-width: 4;
+    box-sizing: border-box;
+    -webkit-transition: all 200ms linear;
+    transition: all 200ms linear;
+   }
+   .progress-wrap.active-progress {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+   }
+  //  Page Progress Area //
+/*============= OTHERS CSS AREA ENDS ===============*/
+
+/*============= BRAND CSS AREA STARTS ===============*/
+.brand-section-area {
+  position: relative;
+  z-index: 1;
+  .brand-images-slider {
+    border-top: 1px solid #D9D4D6;
+    .brand-img {
+      img {
+        width: 180px;
+        height: 44px;
+        object-fit: contain;
+        @media #{$xs} {
+          width: 150px;
+        }
+      }
+    }
+  }
+}
+/*============= BRAND CSS AREA ENDS ===============*/
+
+/*============= OTHERS CSS AREA STARTS ===============*/ 
+.oth-images-area {
+  position: relative;
+  z-index: 2;
+  margin-top: -250px;
+  .oth6-images {
+    position: relative;
+    z-index: 1;
+    .elements15 {
+      position: absolute;
+      right: -5px;
+      top: -5px;
+    }
+    .img1 {
+      img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        border-radius: 8px;
+        @media #{$xs} {
+          height: 500px;
+        }
+      }
+    }
+  }
+}
+/*============= OTHERS CSS AREA ENDS ===============*/
+
+/*============= ERROR CSS AREA STARTS ===============*/
+.error-section-area {
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  .error-images {
+    .img1 {
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 8px;
+      }
+    }
+  }
+}
+/*============= ERROR CSS AREA ENDS ===============*/

@@ -1,0 +1,360 @@
+@use '../../utils/' as * ;
+
+/*============= CASE CSS AREA STARTS ===============*/
+.case1-section {
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    .testimonial-arrow {
+        display: flex;
+        align-items: center;
+        justify-content: end;
+        @media #{$xs} {
+            margin-bottom: 30px;
+        }
+         @media #{$md} {
+            margin-bottom: 30px;
+        }
+        button {
+            border: none;
+            height: 56px;
+            width: 56px;
+            text-align: center;
+            line-height: 56px;
+            border-radius: 50%;
+            background: var(--ztc-bg-bg-4);
+            transition: all .4s;
+            font-size: var(--ztc-font-size-font-s20);
+            &:hover {
+                background: var(--ztc-bg-bg-3);
+                transition: all .4s;
+                color: var(--ztc-text-text-1);
+            }
+        }
+        .prev-arrow {
+            margin: 0 16px 0 0;
+        }
+    }
+    .case-slider-area {
+        position: relative;
+        z-index: 1;
+        .case-boxes-area {
+            position: relative;
+            z-index: 1;
+            margin: 0 10px;
+            transition: all .4s;
+            &.slick-slide.slick-current.slick-active {
+                .img1 {
+                    img {
+                        transform: scale(1.1) rotate(-4deg);
+                        transition: all .4s;
+                    }
+                }
+                .text-area {
+                    background: var(--ztc-bg-bg-3);
+                    transition: all .4s;
+                    h5 {
+                        color: var(--ztc-text-text-1);
+                        transition: all .4s;
+                        opacity: 80%;
+                    }
+                    .title {
+                        color: var(--ztc-text-text-1);
+                        transition: all .4s;
+                    }
+                    p {
+                        color: var(--ztc-text-text-1);
+                        transition: all .4s;
+                        opacity: 80%;
+                    }
+                    .arrow {
+                        a {
+                            background: var(--ztc-bg-bg-1);
+                            color: var(--ztc-text-text-4);
+                            transition: all .4s;
+                        }
+                    }
+                }
+            }
+            &:hover {
+                .img1 {
+                    img {
+                        transform: scale(1.1) rotate(-4deg);
+                        transition: all .4s;
+                    }
+                }
+                .text-area {
+                    background: var(--ztc-bg-bg-3);
+                    transition: all .4s;
+                    h5 {
+                        color: var(--ztc-text-text-1);
+                        transition: all .4s;
+                        opacity: 80%;
+                    }
+                    .title {
+                        color: var(--ztc-text-text-1);
+                        transition: all .4s;
+                    }
+                    p {
+                        color: var(--ztc-text-text-1);
+                        transition: all .4s;
+                        opacity: 80%;
+                    }
+                    .arrow {
+                        a {
+                            background: var(--ztc-bg-bg-1);
+                            color: var(--ztc-text-text-4);
+                            transition: all .4s;
+                        }
+                    }
+                }
+            }
+            .img1 {
+                position: relative;
+                z-index: 1;
+                overflow: hidden;
+                border-radius: 8px;
+                transition: all .4s;
+                img {
+                    height: 100%;
+                    width: 100%;
+                    object-fit: cover;
+                    border-radius: 8px;
+                    transition: all .4s;
+                }
+            }
+            .text-area {
+                border-radius: 10px;
+                background: var(--ztc-bg-bg-1);
+                box-shadow: 0px 4px 40px 0px rgba(0, 0, 0, 0.08);
+                padding: 28px;
+                transition: all .4s;
+                position: relative;
+                margin: -100px 20px 0 20px;
+                z-index: 1;
+                h5 {
+                    color: var(--ztc-text-text-3);
+                    font-family: var(--ztc-family-font1);
+                    font-size: var(--ztc-font-size-font-s16);
+                    font-style: normal;
+                    font-weight: var(--ztc-weight-medium);
+                    line-height: 16px; 
+                    text-transform: uppercase;
+                    transition: all .4s;
+                }
+                .title{
+                    color: var(--ztc-text-text-2);
+                    font-family: var(--ztc-family-font1);
+                    font-size: var(--ztc-font-size-font-s24);
+                    font-style: normal;
+                    font-weight: var(--ztc-weight-bold);
+                    line-height: 24px;
+                    display: inline-block;
+                    transition: all .4s;
+                    @media #{$xl} {
+                        font-size: var(--ztc-font-size-font-s20);
+                        line-height: 20px;
+                    } 
+                    @media #{$md} {
+                        font-size: var(--ztc-font-size-font-s20);
+                        line-height: 20px;
+                    }  
+                    @media #{$xs} {
+                        font-size: var(--ztc-font-size-font-s20);
+                        line-height: 20px;
+                    }     
+                }
+                p {
+                    color: var(--ztc-text-text-3);
+                    font-family: var(--ztc-family-font1);
+                    font-size: var(--ztc-font-size-font-s18);
+                    font-style: normal;
+                    font-weight: var(--ztc-weight-medium);
+                    line-height: 26px; 
+                    display: inline-block;
+                    transition: all .4s;      
+                }
+                .arrow {
+                    position: absolute;
+                    right: -10px;
+                    top: -10px;
+                    a {
+                        height: 48px;
+                        width: 48px;
+                        text-align: center;
+                        line-height: 48px;
+                        border-radius: 50%;
+                        background: var(--ztc-bg-bg-3);
+                        color: var(--ztc-text-text-1);
+                        transition: all .4s;
+                        transform: rotate(-45deg);
+                        display: inline-block;
+                        font-size: var(--ztc-font-size-font-s18);
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Homepage 03 //
+.case3 {
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+     .testimonial-arrow {
+        display: flex;
+        align-items: center;
+        justify-content: end;
+        @media #{$xs} {
+            margin-bottom: 30px;
+        }
+         @media #{$md} {
+            margin-bottom: 30px;
+        }
+        button {
+            border: none;
+            height: 56px;
+            width: 56px;
+            text-align: center;
+            line-height: 56px;
+            border-radius: 50%;
+            background: var(--ztc-bg-bg-11);
+            transition: all .4s;
+            font-size: var(--ztc-font-size-font-s20);
+            &:hover {
+                background: var(--ztc-bg-bg-9);
+                transition: all .4s;
+                color: var(--ztc-text-text-1);
+            }
+        }
+        .prev-arrow-case3 {
+            margin: 0 16px 0 0;
+        }
+    }
+    .cas3-widget-slider-area{
+        &.slick-slide.slick-current.slick-active {
+        .content-area {
+            visibility: visible;
+            opacity: 1;
+            transition: all .6s;
+            transform: scale(1);
+          }
+        }
+        .case3-widget {
+            position: relative;
+            z-index: 1;
+            overflow: hidden;
+            margin: 0 10px;
+            transition: all .4s;
+            &.slick-slide.slick-current.slick-active {
+                .img1 {
+                    img {
+                        transform: scale(1.1) rotate(-4deg);
+                        transition: all .4s;
+                    }
+                }
+                .content-area {
+                    visibility: visible;
+                    opacity: 1;
+                    transition: all .6s;
+                    transform: scale(1);
+                }
+            }
+            &:hover {
+                .img1 {
+                    img {
+                        transform: scale(1.1) rotate(-4deg);
+                        transition: all .4s;
+                    }
+                }
+                .content-area {
+                    visibility: visible;
+                    opacity: 1;
+                    transition: all .6s;
+                    transform: scale(1);
+                }
+            }
+            .img1 {
+                position: relative;
+                z-index: 1;
+                overflow: hidden;
+                border-radius: 8px;
+                img {
+                    height: 100%;
+                    object-fit: cover;
+                    border-radius: 8px;
+                    transition: all .4s;
+                    width: 100%;
+                }
+            }
+            .content-area {
+                background: var(--ztc-bg-bg-12);
+                text-align: center;
+                padding: 28px;
+                border-radius: 10px;
+                transition: all .4s;
+                position: absolute;
+                bottom: 24px;
+                left: 24px;
+                right: 24px;
+                z-index: 2;
+                visibility: hidden;
+                opacity: 0;
+                transition: all .6s;
+                transform: scale(0.7);
+                .arrow {
+                    height: 70px;
+                    width: 70px;
+                    text-align: center;
+                    line-height: 70px;
+                    display: block;
+                    transition: all .4s;
+                    border-radius: 50%;
+                    background: var(--ztc-bg-bg-10);
+                    margin: 0 auto;
+                }
+                span {
+                    color: rgba(255, 255, 255, 0.90);
+                    font-family: var(--ztc-family-font1);
+                    font-size: var(--ztc-font-size-font-s18);
+                    font-style: normal;
+                    font-weight: var(--ztc-weight-medium);
+                    line-height: 18px;
+                    display: inline-block;
+                    transition: all .4s;
+                }
+                .title {
+                    color: var(--ztc-text-text-1);
+                    font-family: var(--ztc-family-font1);
+                    font-size: var(--ztc-font-size-font-s20);
+                    font-style: normal;
+                    font-weight: var(--ztc-weight-bold);
+                    line-height: 20px;
+                    display: inline-block;
+                    transition: all .4s;
+                    &:hover {
+                        color: var(--ztc-text-text-10);
+                        transition: all .4s;
+                    }
+                    @media #{$xs} {
+                        line-height: 26px;
+                    }
+                    @media #{$md} {
+                        line-height: 26px;
+                    }
+                }
+                p {
+                    color: rgba(255, 255, 255, 0.80);
+                    text-align: center;
+                    font-family: var(--ztc-family-font1);
+                    font-size: var(--ztc-font-size-font-s18);
+                    font-style: normal;
+                    font-weight: var(--ztc-weight-medium);
+                    line-height: 26px;
+                }
+            }
+        }
+    }
+}
+/*============= CASE CSS AREA ENDS ===============*/
