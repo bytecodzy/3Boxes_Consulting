@@ -4912,8 +4912,8 @@ img {
   visibility: visible;
 }
 .homepage10-body .vl-offcanvas .vl-offcanvas-logo {
-  height: 50px;
-  width: 164px;
+  height: 250px;
+  width: 280px;
   -o-object-fit: contain;
      object-fit: contain;
   filter: brightness(0) invert(1);
@@ -4926,6 +4926,7 @@ img {
 }
 .homepage10-body .vl-offcanvas-menu ul {
   list-style: none;
+  margin-top: -70px;
 }
 .homepage10-body .vl-offcanvas-menu ul li {
   position: relative;
