@@ -9313,16 +9313,19 @@ img {
   position: relative;
   z-index: 1;
   overflow: hidden;
+  margin-top: 0px;
   padding: 225px 0 32px;
   background: var(--ztc-bg-bg-15);
 }
 .vl-footer10-section-area .footer-logo-area {
   position: relative;
+  margin-top: -24px;
   z-index: 1;
 }
 .vl-footer10-section-area .footer-logo-area img {
   max-width: 350px;
   max-height: 290px;
+  margin-left: -20px;
   width: auto;
   height: auto;
   -o-object-fit: contain;
@@ -9337,11 +9340,13 @@ img {
   font-weight: var(--ztc-weight-medium);
   line-height: 28px;
   opacity: 80%;
+  text-align: center;
   margin-top: -14%;
 }
 .vl-footer10-section-area .footer-logo-area .social-links li {
   display: inline-block;
   margin: 0 6px 0 0;
+  margin-left: 8px;
 }
 .vl-footer10-section-area .footer-logo-area .social-links li:nth-last-child(1) {
   margin: 0;
