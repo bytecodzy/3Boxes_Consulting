@@ -3358,7 +3358,7 @@ img {
 .service-details-section .service-main-content .accordion-widget-area .accordion .accordion-item button {
   color: var(--ztc-text-text-2);
   font-family: var(--ztc-family-font1);
-  font-size: var(--ztc-font-size-font-s28);
+  font-size: var(--ztc-font-size-font-s20);
   font-style: normal;
   font-weight: var(--ztc-weight-bold);
   line-height: 20px;
@@ -3398,6 +3398,7 @@ img {
 }
 .service-details-section .service-main-content .accordion-widget-area .accordion .accordion-item .accordion-button:not(.collapsed)::before {
   background: var(--ztc-bg-bg-1);
+ 
 }
 .service-details-section .service-main-content .accordion-widget-area .accordion .accordion-item .accordion-button:not(.collapsed) {
   background: transparent;
@@ -4954,6 +4955,7 @@ img {
 .homepage10-body .vl-offcanvas-menu ul li .sub-menu {
   display: none;
   padding-left: 20px;
+  margin-top: 8px;
 }
 .homepage10-body .vl-menu-close {
   position: absolute;
