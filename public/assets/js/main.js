@@ -255,7 +255,7 @@ setTimeout(function () {
         showTyping();
         getBotpressResponse(userText, true);
       } else {
-        appendMessage("bot", "I'm having trouble responding right now. Please try again or contact us at info@3boxesconsulting.com");
+        appendMessage("bot", "I'm having trouble responding right now. Please try again or contact us at enquiries@3boxesconsulting.com");
       }
     })
     .catch(function(error) {
