@@ -19,7 +19,7 @@ app.use(cors({
     'https://3boxesconsulting.com',
     'http://www.3boxesconsulting.com',
     'http://3boxesconsulting.com'
-  ], // Allow all origins on Vercel
+  ], 
   methods: ['GET', 'POST'],
   allowedHeaders: ['Content-Type']
 }));
