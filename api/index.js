@@ -14,7 +14,12 @@ const app = express();
 app.use(express.json({ limit: '1mb' }));
 
 app.use(cors({
-  origin: true,  // Allow all origins on Vercel
+   origin: [
+    'https://www.3boxesconsulting.com',
+    'https://3boxesconsulting.com',
+    'http://www.3boxesconsulting.com',
+    'http://3boxesconsulting.com'
+  ], // Allow all origins on Vercel
   methods: ['GET', 'POST'],
   allowedHeaders: ['Content-Type']
 }));

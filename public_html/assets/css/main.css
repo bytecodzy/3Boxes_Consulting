@@ -1114,7 +1114,7 @@ img {
   background: #5e8c01;
   z-index: 1;
   font-family: var(--ztc-family-font1);
-  font-size: var(--ztc-font-size-font-s18);
+  font-size: var(--ztc-font-size-font-s12);
   line-height: 20px;
   font-weight: var(--ztc-weight-black);
   transition: all 0.4s;

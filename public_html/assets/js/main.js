@@ -184,7 +184,8 @@ setTimeout(function () {
 
   // ------- CALL BOTPRESS API VIA BACKEND -------
   function getBotpressResponse(userText, isRetry) {
-    var apiUrl = window.location.origin + '/api/chat/message';
+  // Use Vercel backend API (HostGator doesn't support Node.js)
+  var apiUrl = 'https://3boxes-consulting.vercel.app/api/chat/message';
 
     var requestBody = {
       userId: chatUserId,
